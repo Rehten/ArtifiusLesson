@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artifius</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #VideoBackground {
+            width: 100%;
+        }
+        .background-wrapper {
+            min-height: 100vh;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow-y: hidden;
+            background: black;
+            /*//дописываем стили*/
+            position: absolute;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .menu-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu {
+            color: #8dc3ff;
+            background: rgba(27, 43, 58, 0.9);
+            border: 1px solid #8dc3ff;
+            width: 22rem;
+            min-height: 20rem;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .menu-content>h3 {
+            text-align: center;
+        }
+
+        .menu-content>label {
+            display: block;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        label {
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        input {
+            margin-bottom: 0.85rem;
+            background: transparent;
+            border: 1px solid rgba(141, 195, 255, 0.51);
+            color: #8dc3ff;
+            font-size: 0.95rem;
+            padding-top: 0.15rem;
+            padding-bottom: 0.15rem;
+            padding-right: 0.1rem;
+            padding-left: 0.25rem;
+            outline: 0;
+            width: calc(100% - 0.1rem - 0.25rem - 2px);
+            transition: border-top-color 0.3s ease-in-out 0.15s,
+                        border-left-color 0.3s ease-in-out 0.15s,
+                        border-right-color 0.3s ease-in-out 0.15s,
+                        border-bottom-color 0.3s ease-in-out 0.15s;
+        }
+
+        input:focus {
+            border: 1px solid #8dc3ff;
+        }
+
+        input::placeholder {
+            color: rgba(141, 195, 255, 0.35);
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        button {
+            font-size: 0.95rem;
+            width: calc(50% - 0.2rem);
+            background: transparent;
+            border: 1px solid rgba(141, 195, 255, 0.51);
+            color: rgba(141, 195, 255, 0.51);
+            outline: 0;
+            transition: border-top-color 0.3s ease-in-out 0.15s,
+            border-left-color 0.3s ease-in-out 0.15s,
+            border-right-color 0.3s ease-in-out 0.15s,
+            border-bottom-color 0.3s ease-in-out 0.15s,
+            color 0.3s ease-in-out 0.15s;
+            padding-top: 0.1rem;
+            padding-bottom: 0.1rem;
+        }
+
+        button:focus {
+            border: 1px solid #8dc3ff;
+            color: #8dc3ff;
+        }
+
+        .menu-buttons {
+            margin-top: 0.3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="background-wrapper">
+    <video id="VideoBackground" src="./background.mov" autoplay loop></video>
+</div>
+<div class="menu-wrapper">
+    <div class="menu">
+        <div class="menu-header">
+            <h2><img src="./logo.svg" alt="" height="37">Artifius</h2>
+        </div>
+        <form>
+            <div class="menu-content">
+                <h3>Log in</h3>
+                <label>Enter user name</label>
+                <input type="text" placeholder="User name">
+                <label>Enter password</label>
+                <input type="password" placeholder="User password">
+            </div>
+            <div class="menu-buttons">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
